@@ -8,6 +8,8 @@ header.addEventListener('mouseover', (event) => {
 
 header.addEventListener('mouseleave', (event) => {
     event.target.style.backgroundColor = 'initial';
+    console.log('let see')
+    // console showed this
 });
 
 //added this section
@@ -36,6 +38,6 @@ busImg.addEventListener('click',function(){
   document.body.style.backgroundColor = 'coral';
 });
 
-busImg.addEventListener('dbclick', function(){
+busImg.addEventListener('dblclick', function(){
     document.body.style.backgroundColor = 'initial';
 });

@@ -3,13 +3,21 @@ const header = document.querySelector('.main-navigation');
 
 header.addEventListener('mouseover', (event) => {
     event.target.style.backgroundColor = 'yellow';
-    event.stopPropogation();
+    //event.stopPropogation();
 });
 
 header.addEventListener('mouseleave', (event) => {
     event.target.style.backgroundColor = 'initial';
 });
 
+//added this section
+header.addEventListener("keydown", (event) => {
+    if (event.isComposing || event.keyCode === 229) {
+      return;
+    }
+    console.log('click somwhere else')
+  });
+//till here but no response on console
 Array.from(document.images).forEach (function (image) {
     image.addEventListener('mouseover', (event) => {
         event.target.style.boxShadow = '5px 5px 25px pink';
@@ -29,4 +37,5 @@ busImg.addEventListener('click',function(){
 });
 
 busImg.addEventListener('dbclick', function(){
-    document.body.style.backgroundColor = 'initial':
+    document.body.style.backgroundColor = 'initial';
+});
